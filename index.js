@@ -170,7 +170,7 @@ let rates = [0.04, 0.05, 0.06];
 let refactor = (principal, rates, years) => {
     for (let i = 0; i < rates.length; i++) {
         let count = 0;
-        for (let a = (rates[i] - 0.02); a < (rates[i] + 0.02); a += 0.005) {
+        for (let a = (rates[i] - 0.02); a < (rates[i] + 0.021); a += 0.005) {
             let monthlyInterestRate = a / 12;
             let periods = years * 12;
             let numerator = monthlyInterestRate * Math.pow((1 + monthlyInterestRate), periods);
