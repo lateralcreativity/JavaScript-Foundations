@@ -118,7 +118,7 @@ For example, variableInterestRate(200000, 0.04, 30) should console.log:
 
 let variableInterestRate = (principal, interestRate, years) => {
     let count = 0;
-    for (let i = (interestRate - 0.02); i < (interestRate + 0.02); i += 0.005) {
+    for (let i = (interestRate - 0.02); i < (interestRate + 0.021); i += 0.005) {
         let monthlyInterestRate = i / 12;
         let periods = years * 12;
         let numerator = monthlyInterestRate * Math.pow((1 + monthlyInterestRate), periods);
